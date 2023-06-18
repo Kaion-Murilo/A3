@@ -3,7 +3,7 @@ import requests
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import joinedload
-from typing import Optional
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -98,7 +98,6 @@ def login():
 
   return render_template('login.html')
 
-
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
   if request.method == 'POST':
@@ -187,7 +186,6 @@ def crud():
                          users=users,
                          user_to_update=user_to_update)
 
-
 @app.route('/api/usuarios', methods=['GET'])
 def get_usuarios():
   if 'username' not in session: 
@@ -222,22 +220,7 @@ def popo(cinemas_proximos = None):
 
   filmes_populares = data['results']
   filmes = []
-
-  url = f'https://api.themoviedb.org/3/movie/top_rated?api_key={api_key}&language=pt-BR'
-  response = requests.get(url)
-  data = response.json()
-
-  movies = data['results']
-
-  for movie in movies:
-    filme = {
-      'id': movie['id'],
-      'title': movie['title'],
-      'poster_path': movie['poster_path']
-    }
-
-    filmes.append(filme)
-  print(cinemas_proximos)
+  filmes.append(filmes)
   return render_template('catalogo.html',
                          filmes=filmes_populares,
                          filmesav=filmes,

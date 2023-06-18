@@ -379,7 +379,7 @@ header{
     position: static !important;
     margin: 0 0 0 -100px !important;
 }
-}
+
 @media (max-width:320){
     .swiper-button-next,
     .swiper-button-prev{
