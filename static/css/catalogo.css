@@ -64,6 +64,7 @@ html, body {
     }
 
 }
+
 @media (max-width: 420px) {
     main {            
         margin-top: 80px;

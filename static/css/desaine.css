@@ -17,7 +17,15 @@ body{
   border-radius: 5px;
   margin: 10px;
 }
-
+@media (min-width: 1276px) {
+  .img-fluid{
+  width:  533px;
+  height: 533px; 
+  }
+  .custom-container {
+   /* Altura desejada */
+  margin-top: 90px;
+  margin-left:128px;}}
 .actor-card img {
   width: 100%;
   height: auto;

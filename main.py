@@ -279,7 +279,6 @@ def buscar_filme():
 
 @app.route('/leiamais/<string:nome_filme>', methods=['GET', 'POST'])
 def leiamais(nome_filme):
-
   url = f'https://api.themoviedb.org/3/search/movie?api_key={api_key}&query={nome_filme}&language={idioma}'
   response = requests.get(url)
   data = response.json()
