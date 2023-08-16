@@ -234,10 +234,10 @@ def home():
 
 @app.route('/cinemas_proximos')
 def cinemas():
-  #latitude = -5.81116
-  #longitude = -35.2063
-  latitude = request.args.get('latitude')
-  longitude = request.args.get('longitude')
+  latitude = -5.81116
+  longitude = -35.2063
+  # latitude = request.args.get('latitude')
+  # longitude = request.args.get('longitude')
   api_key = 'qkmjt6x-ZIXrixQqc_CwuLDjApx6-48wbzRBo_3gVo3KcvGOxT05VB8QkGQex9EMG8J0zYHzeL0uiBZI_FkaT4D-EYSFpOuvDCEOn4KKRk0Z3V6COG_0OC-ggduAZHYx'
 
   params = {
